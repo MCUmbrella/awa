@@ -1,1 +1,2 @@
-Usage: ./awa.exc <number o' "awa"s>
+Usage: awa <Number o' "awa"s> [[--upper || -u] || [--firstupper || -U]]
+awa
