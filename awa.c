@@ -1,12 +1,17 @@
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
-#include<math.h>
+unsigned long long pow(unsigned long long a,unsigned long long b)
+{
+	unsigned long long ret=1;
+	for(unsigned long long i=0;i<b;i++)
+	 ret*=a;
+    return ret;
+}
 unsigned long long toULL(char* c)
 {
 unsigned long long ret=0;
-for(int i=0;i<strlen(c);i++)
-   if(c[i]>'0' && c[i]<'9')
+for(unsigned int i=0;i<strlen(c);i++)
+   if(c[i]>='0' && c[i]<='9')
    ret+=(c[i]-'0')*pow(10,(strlen(c)-i-1));
    else
    return 0;
