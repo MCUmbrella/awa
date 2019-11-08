@@ -1,6 +1,17 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<math.h>
+unsigned long long toULL(char* c)
+{
+unsigned long long ret=0;
+for(int i=0;i<strlen(c);i++)
+   if(c[i]>'0' && c[i]<'9')
+   ret+=(c[i]-'0')*pow(10,(strlen(c)-i-1));
+   else
+   return 0;
+return ret;
+}
 void awa(unsigned long long a){for(unsigned long long b=0;b<a;b++){printf("aw");};printf("a\n");}
 void AWA(unsigned long long a){for(unsigned long long b=0;b<a;b++){printf("AW");};printf("A\n");}
 void Awa(unsigned long long a){for(unsigned long long b=0;b<a;b++){printf("Aw");};printf("A\n");}
@@ -20,7 +31,7 @@ if(hasArgument(argv+1,argc-1,"-h")||hasArgument(argv+1,argc-1,"--help")){puts("H
   if(hasArgument(argv+1,argc-1,"-u")||hasArgument(argv+1,argc-1,"--upper")) u=1;
   else if(hasArgument(argv+1,argc-1,"-U")||hasArgument(argv+1,argc-1,"--aupper")) U=1;
 //for(short i=2;i<argc;i++){c(argv[i]);};
-int aaa=atoi(argv[1]);
+unsigned long long aaa=toULL(argv[1]);
 if(aaa<1){return 2;}
 if(u==1&&U==1){return 3;};
 if(u==1){AWA(aaa);return 0;};
