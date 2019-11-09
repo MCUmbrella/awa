@@ -21,9 +21,9 @@ if(!strcmp(argv[1],"-h")||!strcmp(argv[1],"--help")){puts("Help for awa:\n\nUsag
  else if(strchr(argv[1],'-')!=0){return 1;};
 for(short i=2;i<argc;i++){c(argv[i]);};
 unsigned long long aaa=strtoull(argv[1],&endptr,10);
- if((int)endptr!=0)
+ if((int)*endptr!=0)
  {
-  printf("Inalid Input");
+  printf("Inalid Number");
   return -1;
  }
 if(d){printf("aaallu=%llu\natoiargv1llu=%llu\natoiargv1d=%d\n",aaa,atoi(argv[1]),atoi(argv[1]));return 0;};
